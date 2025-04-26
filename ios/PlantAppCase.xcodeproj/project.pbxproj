@@ -7,34 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01E267AAFA7345719A9738AD /* Rubik-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C8543F7F3F9E47F39BD9F041 /* Rubik-SemiBold.ttf */; };
 		0C80B921A6F3F58F76C31292 /* libPods-PlantAppCase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-PlantAppCase.a */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
+		23A4CB99AC154AF2BB4B062B /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 013527BD749C419C8F66F887 /* Rubik-Regular.ttf */; };
+		48585FE86EA9480F926822D5 /* Rubik-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BD203BD2C8D348FFB0158684 /* Rubik-ExtraBold.ttf */; };
+		65CE7C369EA145A995EFB915 /* Rubik-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 49E8BE87FDDE47AB8364E2F3 /* Rubik-Black.ttf */; };
 		761780ED2CA45674006654EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761780EC2CA45674006654EE /* AppDelegate.swift */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		C2F49719B6544D9BB66E78FF /* Rubik-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9F4EC8B9A2104ADCA9AE88E4 /* Rubik-Bold.ttf */; };
+		D387AAE95BBD7BD3A713831D /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
+		DC6B90D2FDE34E85A8ABE211 /* Rubik-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4E51201E1B8433F9B7DC4F5 /* Rubik-Light.ttf */; };
+		EA2191D8489D44C7BB4F1B1F /* icomoon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 94D85433FC314C258B2624D7 /* icomoon.ttf */; };
+		F83342A9C02F4E648ECCAF59 /* Rubik-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 39CA2593215F49DBBD4E45C1 /* Rubik-Medium.ttf */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		00E356F41AD99517003FC87E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = PlantAppCase;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		013527BD749C419C8F66F887 /* Rubik-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-Regular.ttf"; path = "../src/assets/fonts/Rubik-Regular.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* PlantAppCase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlantAppCase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = PlantAppCase/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = PlantAppCase/Info.plist; sourceTree = "<group>"; };
 		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = PlantAppCase/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		39CA2593215F49DBBD4E45C1 /* Rubik-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-Medium.ttf"; path = "../src/assets/fonts/Rubik-Medium.ttf"; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-PlantAppCase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlantAppCase.debug.xcconfig"; path = "Target Support Files/Pods-PlantAppCase/Pods-PlantAppCase.debug.xcconfig"; sourceTree = "<group>"; };
+		49E8BE87FDDE47AB8364E2F3 /* Rubik-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-Black.ttf"; path = "../src/assets/fonts/Rubik-Black.ttf"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-PlantAppCase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlantAppCase.release.xcconfig"; path = "Target Support Files/Pods-PlantAppCase/Pods-PlantAppCase.release.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-PlantAppCase.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PlantAppCase.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		761780EC2CA45674006654EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = PlantAppCase/AppDelegate.swift; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = PlantAppCase/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		94D85433FC314C258B2624D7 /* icomoon.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = icomoon.ttf; path = ../src/assets/fonts/icomoon.ttf; sourceTree = "<group>"; };
+		9F4EC8B9A2104ADCA9AE88E4 /* Rubik-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-Bold.ttf"; path = "../src/assets/fonts/Rubik-Bold.ttf"; sourceTree = "<group>"; };
+		BD203BD2C8D348FFB0158684 /* Rubik-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-ExtraBold.ttf"; path = "../src/assets/fonts/Rubik-ExtraBold.ttf"; sourceTree = "<group>"; };
+		C8543F7F3F9E47F39BD9F041 /* Rubik-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-SemiBold.ttf"; path = "../src/assets/fonts/Rubik-SemiBold.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		F4E51201E1B8433F9B7DC4F5 /* Rubik-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-Light.ttf"; path = "../src/assets/fonts/Rubik-Light.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,14 +55,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00E356F01AD99517003FC87E /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				00E356F11AD99517003FC87E /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		13B07FAE1A68108700A75B9A /* PlantAppCase */ = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +76,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		302FE2A5A6CA4821B15AA222 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				49E8BE87FDDE47AB8364E2F3 /* Rubik-Black.ttf */,
+				9F4EC8B9A2104ADCA9AE88E4 /* Rubik-Bold.ttf */,
+				BD203BD2C8D348FFB0158684 /* Rubik-ExtraBold.ttf */,
+				F4E51201E1B8433F9B7DC4F5 /* Rubik-Light.ttf */,
+				39CA2593215F49DBBD4E45C1 /* Rubik-Medium.ttf */,
+				013527BD749C419C8F66F887 /* Rubik-Regular.ttf */,
+				C8543F7F3F9E47F39BD9F041 /* Rubik-SemiBold.ttf */,
+				94D85433FC314C258B2624D7 /* icomoon.ttf */,
+			);
+			name = Resources;
+			path = "";
+			sourceTree = "<group>";
+		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +107,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				302FE2A5A6CA4821B15AA222 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -172,19 +187,21 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		00E356EC1AD99517003FC87E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		13B07F8E1A680F5B00A75B9A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				D387AAE95BBD7BD3A713831D /* PrivacyInfo.xcprivacy in Resources */,
+				65CE7C369EA145A995EFB915 /* Rubik-Black.ttf in Resources */,
+				C2F49719B6544D9BB66E78FF /* Rubik-Bold.ttf in Resources */,
+				48585FE86EA9480F926822D5 /* Rubik-ExtraBold.ttf in Resources */,
+				DC6B90D2FDE34E85A8ABE211 /* Rubik-Light.ttf in Resources */,
+				F83342A9C02F4E648ECCAF59 /* Rubik-Medium.ttf in Resources */,
+				23A4CB99AC154AF2BB4B062B /* Rubik-Regular.ttf in Resources */,
+				01E267AAFA7345719A9738AD /* Rubik-SemiBold.ttf in Resources */,
+				EA2191D8489D44C7BB4F1B1F /* icomoon.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,14 +292,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* PlantAppCase */;
-			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		13B07F941A680F5B00A75B9A /* Debug */ = {
@@ -408,7 +417,14 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					" ",
+				);
+				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
+				USE_HERMES = true;
 			};
 			name = Debug;
 		};
@@ -473,7 +489,13 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					" ",
+				);
+				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
+				USE_HERMES = true;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
