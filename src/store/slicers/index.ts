@@ -1,7 +1,9 @@
-import categoriesReducer from './categories';
-import questionsReducer from './questions';
+import categoriesReducer, { fetchCategories } from './categories';
+import questionsReducer, { fetchQuestions } from './questions';
 
 export {
   categoriesReducer,
   questionsReducer,
+  fetchCategories,
+  fetchQuestions
 };

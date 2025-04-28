@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-import { ImageSourcePropType } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import AppSettings from '@appSettings';
 
 export interface FeatureItem {
-  image: ImageSourcePropType;
+  icon: string;
   title: string;
   subtitle: string;
 }
@@ -20,17 +19,17 @@ const PaywallLogics = () => {
 
   const featuresData = [
     {
-      image: require('src/assets/icons/scan.png'),
+      icon: 'scanner',
       title: "Unlimited",
       subtitle: "Plant Identify"
     },
     {
-      image: require('src/assets/icons/speed.png'),
+      icon: 'speed',
       title: "Faster",
       subtitle: "Process"
     },
     {
-      image: require('src/assets/icons/leaves.png'),
+      icon: 'leaves',
       title: "Detailed",
       subtitle: "Plant care"
     }

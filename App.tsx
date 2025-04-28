@@ -1,5 +1,5 @@
 import React from 'react';
-import AppNavigator from './src/navigation/appNavigator';
+import AppNavigator from 'src/navigation';
 import { NavigationContainer } from '@react-navigation/native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { Provider } from 'react-redux';

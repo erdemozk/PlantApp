@@ -1,15 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigation } from '@react-navigation/native';
-import { fetchCategories } from 'src/store/slicers/categories';
-import { fetchQuestions } from 'src/store/slicers/questions';
+import { fetchQuestions,fetchCategories } from 'src/store/slicers/';
 import { useAppDispatch, useAppSelector } from 'src/store/store';
 
 const HomeLogics = () => {
   const navigation = useNavigation()
   const [searchKey, setSearchKey] = useState('');
   const dispatch = useAppDispatch();
-  const { categories } = useAppSelector(state => state.categories);
-  const { questions } = useAppSelector(state => state.questions);
+  const { categories, isLoading: categoryLoading } = useAppSelector(state => state.categories);
+  const { questions, isLoading: questionLoading  } = useAppSelector(state => state.questions);
 
   useEffect(() => {
     dispatch(fetchCategories());
@@ -32,6 +31,7 @@ const HomeLogics = () => {
     handleCategory,
     handlePromotion,
     handleChangeText,
+    loading: categoryLoading || questionLoading,
   };
 };
 
