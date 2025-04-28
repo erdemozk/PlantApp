@@ -1,8 +1,9 @@
 import React from 'react';
-import { Text, SafeAreaView, Image, View } from 'react-native';
-import { Button } from 'elements';
+import { SafeAreaView, Image, View } from 'react-native';
+import { Button, UnderlinedText } from 'elements';
 import { PaginationDots } from 'components';
 import { OnboardingContainer } from 'pageContainers';
+import { smartScale } from '_utils';
 import styles from './style';
 
 interface OnboardingItem {
@@ -25,15 +26,17 @@ const OnboardingScreen: React.FC<Props> = ({
   totalItems,
   activeIndex,
 }) => {
-  const titleParts = onboardingItem.title.split('{%b%}');
 
   return (
     <SafeAreaView style={styles.container}>
-      <Text style={styles.headerTitle}>
-        {titleParts[0]}
-        <Text style={styles.boldWord}>{onboardingItem.boldWord}</Text>
-        {titleParts[1]}
-      </Text>
+      <UnderlinedText
+        fontSize={smartScale(28)}
+        underlineOffsetRatio={.5}
+        text={onboardingItem.title}
+        boldStyle={styles.boldWord}
+        textStyle={styles.headerTitle}
+        boldWord={onboardingItem.boldWord}
+      />
       <Image
         source={onboardingItem.image}
         style={styles.onboardingImage}

@@ -10,11 +10,12 @@ const styles = StyleSheet.create({
   },
   headerTitle: {
     color: '#13231B',
-    fontSize: smartScale(28),
-    paddingHorizontal: verticalScale(24),
-    fontFamily: AppSettings.fonts["500"]
+    alignItems: 'center',
+    paddingLeft: verticalScale(24),
+    fontFamily: AppSettings.fonts["500"],
   },
   boldWord: {
+    color: '#13231B',
     fontFamily: AppSettings.fonts["800"]
   },
   headerContent: {

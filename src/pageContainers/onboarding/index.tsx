@@ -11,7 +11,7 @@ interface OnboardingItem {
 const onboardingData: OnboardingItem[] = [
   {
     index: 0,
-    title: 'Take a photo to {%b%}\nthe plant!',
+    title: 'Take a photo to {%b%} the plant!',
     boldWord: 'identify',
     image: require('src/assets/images/onboardingOne.png')
   },
