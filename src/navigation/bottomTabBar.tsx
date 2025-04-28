@@ -7,8 +7,10 @@ import {
   MyGardenScreen,
   ProfileScreen,
 } from 'pages';
-import {Icon} from 'elements';
-import ScanBottomBar from '../components/scanBottomButton';
+import { Icon } from 'elements';
+import { Platform } from 'react-native';
+import { ScanBottomButton } from 'components';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 export type MainTabParamList = {
   Home: undefined;
@@ -21,12 +23,21 @@ export type MainTabParamList = {
 const Tab = createBottomTabNavigator<MainTabParamList>();
 
 const MainTabs = () => {
+  const insets = useSafeAreaInsets()
   return (
     <Tab.Navigator
       screenOptions={{
         headerShown: false,
         tabBarActiveTintColor: '#28AF6E',
         tabBarInactiveTintColor: '#BDBDBD',
+        tabBarStyle: Platform.select({
+          android: {
+            height: 60 + insets.bottom,
+          }
+        }),
+        tabBarLabelStyle: {
+          paddingTop: 2
+        }
       }}>
       <Tab.Screen
         name="Home"
@@ -50,7 +61,7 @@ const MainTabs = () => {
         name="Scan"
         component={ScanScreen}
         options={{
-          tabBarButton: ({onPress}) => <ScanBottomBar onPress={onPress} />,
+          tabBarButton: ({onPress}) => <ScanBottomButton onPress={onPress} />,
         }}
       />
       <Tab.Screen

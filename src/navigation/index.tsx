@@ -10,16 +10,22 @@ export type RootStackParamList = {
   OnboardingStack: undefined;
   MainTabs: undefined;
 };
+type OnboardingStackParamList = {
+  GetStartedScreen: undefined;
+  OnboardingScreen: undefined;
+  PaywallScreen: undefined;
+};
 
+const OnboardingStackNav = createStackNavigator<OnboardingStackParamList>();
 const Stack = createStackNavigator<RootStackParamList>();
 
 const OnboardingStack: React.FC = () => {
   return (
-    <Stack.Navigator initialRouteName='GetStartedScreen' screenOptions={{ headerShown: false }}>
-      <Stack.Screen name="GetStartedScreen" component={GetStartedScreen} />
-      <Stack.Screen name="OnboardingScreen" component={OnboardingScreen} />
-      <Stack.Screen name="PaywallScreen" component={PaywallScreen} />
-    </Stack.Navigator>
+    <OnboardingStackNav.Navigator initialRouteName='GetStartedScreen' screenOptions={{ headerShown: false }}>
+      <OnboardingStackNav.Screen name="GetStartedScreen" component={GetStartedScreen} />
+      <OnboardingStackNav.Screen name="OnboardingScreen" component={OnboardingScreen} />
+      <OnboardingStackNav.Screen name="PaywallScreen" component={PaywallScreen} />
+    </OnboardingStackNav.Navigator>
   );
 };
 
