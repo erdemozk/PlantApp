@@ -1,5 +1,5 @@
 import AppSettings from '@appSettings';
-import { StyleSheet } from "react-native";
+import { StyleSheet, Platform } from "react-native";
 import { smartScale, verticalScale, scale } from '_utils';
 
 const styles = StyleSheet.create({
@@ -12,20 +12,26 @@ const styles = StyleSheet.create({
   },
   closeButton: {
     marginTop: 10,
-    marginHorizontal: 24,
-    alignSelf: 'flex-end'
+    borderRadius: 50,
+    alignItems: 'center',
+    alignSelf: 'flex-end',
+    width: smartScale(24),
+    height: smartScale(24),
+    justifyContent: 'center',
+    marginRight: smartScale(24),
+    backgroundColor: 'rgba(0, 0, 0, 0.24)',
   },
   paywallImage: {
-    top: verticalScale(-50),
     width: '100%', 
     height: scale(570),
     position: 'absolute', 
+    top: Platform.OS === 'ios' ? verticalScale(-40) : verticalScale(-110),
   },
   title: {
     fontSize: 24,
     color: '#ffffff',
-    marginHorizontal: 24,
-    marginTop: verticalScale(200),
+    marginHorizontal: smartScale(24),
+    marginTop: verticalScale(190),
     fontFamily: AppSettings.fonts['400'],
   },
   titleBold: {
@@ -36,7 +42,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     lineHeight: 24,
     marginBottom: 20,
-    marginHorizontal: 24,
+    marginHorizontal: smartScale(24),
     color: 'rgba(255, 255, 255, 0.7)',
     fontFamily: AppSettings.fonts['300'],
   },
@@ -45,7 +51,7 @@ const styles = StyleSheet.create({
   },
   featuresContentContainer: {
     gap: 8,
-    paddingHorizontal: 24
+    paddingHorizontal: smartScale(24)
   },
   featureCard: {
     borderRadius: 14,
@@ -56,7 +62,10 @@ const styles = StyleSheet.create({
   },
   featureIconContainer: {
     width: smartScale(36),
-    height: smartScale(36)
+    height: smartScale(36),
+    padding: 10,
+    backgroundColor: 'rgba(0, 0, 0, 0.24)',
+    borderRadius: 8
   },
   featureTitle: {
     fontSize: 16,
@@ -72,19 +81,19 @@ const styles = StyleSheet.create({
     fontFamily: AppSettings.fonts['400'],
   },
   optionsContainer: {
-    marginHorizontal: 24,
+    marginHorizontal: smartScale(24),
     gap: verticalScale(16),
     marginBottom: verticalScale(26),
   },
   optionButton: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    backgroundColor: 'rgba(255, 255, 255, 0.05)',
-    paddingVertical: 15,
-    paddingHorizontal: 20,
-    borderRadius: 14,
     borderWidth: 0.5,
+    borderRadius: 14,
+    alignItems: 'center',
+    flexDirection: 'row',
+    paddingVertical: smartScale(13),
+    paddingHorizontal: smartScale(16),
     borderColor: 'rgba(255, 255, 255, 0.3)',
+    backgroundColor: 'rgba(255, 255, 255, 0.05)',
   },
   optionButtonSelected: {
     borderColor: '#28AF6E',
@@ -129,7 +138,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: -1,
     right: -1,
-    backgroundColor: '#2AAA8A',
+    backgroundColor: '#28AF6E',
     paddingHorizontal: 12,
     paddingVertical: 5,
     borderTopRightRadius: 14,

@@ -4,12 +4,12 @@ import { GetStartedContainer } from 'pageContainers';
 import { Button } from 'elements';
 import styles from './style';
 
-type Props = {
+type GetStartedProps = {
   handleGetStarted: () => void;
   handleAgreement: () => void;
 };
 
-const GetStartedScreen: React.FC<Props> = ({
+const GetStartedScreen: React.FC<GetStartedProps> = ({
   handleGetStarted,
   handleAgreement,
 }) => (
@@ -30,21 +30,23 @@ const GetStartedScreen: React.FC<Props> = ({
         style={styles.image}
         resizeMode="contain"
       />
-      <Button
-        title="Get Started"
-        onPress={handleGetStarted}
-        containerStyle={styles.buttonContainer}
-      />
-      <Text style={styles.agreementsText}>
-        By tapping next, you are agreeing to PlantID{'\n'}
-        <Text onPress={handleAgreement} style={styles.underlineDecoration}>
-          Terms of Use
-        </Text>{' '}
-        &{' '}
-        <Text onPress={handleAgreement} style={styles.underlineDecoration}>
-          Privacy Policy.
+      <View style={styles.footerContainer}>
+        <Button
+          title="Get Started"
+          onPress={handleGetStarted}
+          containerStyle={styles.buttonContainer}
+        />
+        <Text style={styles.agreementsText}>
+          By tapping next, you are agreeing to PlantID{'\n'}
+          <Text onPress={handleAgreement} style={styles.underlineDecoration}>
+            Terms of Use
+          </Text>{' '}
+          &{' '}
+          <Text onPress={handleAgreement} style={styles.underlineDecoration}>
+            Privacy Policy.
+          </Text>
         </Text>
-      </Text>
+      </View>
     </SafeAreaView>
   </ImageBackground>
 );

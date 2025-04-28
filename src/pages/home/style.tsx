@@ -10,6 +10,7 @@ const styles = StyleSheet.create({
   headerContainer: {
     zIndex: 1,
     paddingHorizontal: smartScale(24),
+    marginTop: Platform.OS === 'ios' ? 0 : 10,
   },
   headerTitle: {
     color: '#13231B',
@@ -28,7 +29,7 @@ const styles = StyleSheet.create({
   headerImage: {
     width: '100%',
     position: 'absolute',
-    top: Platform.OS === 'ios' ? smartScale(-45) : smartScale(-20),
+    top: Platform.OS === 'ios' ? smartScale(-45) : smartScale(-25),
   },
   searchContainer: {
     gap: 12,
@@ -56,14 +57,17 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     flexDirection: 'row',
     alignItems: 'center',
-    marginHorizontal: 24,
     marginTop: smartScale(24),
     backgroundColor: '#24201A',
+    marginHorizontal: smartScale(24),
     paddingHorizontal: smartScale(12),
     paddingVertical: verticalScale(13),
   },
   mailImage: {
     width: smartScale(40),
+  },
+  promotionTextContainer: {
+    flex: 10
   },
   promotionTitle: {
     fontSize: 16,
@@ -80,10 +84,10 @@ const styles = StyleSheet.create({
   getStartedTitle: {
     fontSize: 15,
     marginTop: 24,
-    marginLeft: 24,
     lineHeight: 20,
     color: '#13231B',
     letterSpacing: -0.24,
+    marginLeft: smartScale(24),
     fontFamily: AppSettings.fonts['500'],
   },
   questionContainer: {
@@ -91,7 +95,7 @@ const styles = StyleSheet.create({
   },
   questionContentContainer: {
     gap: 10,
-    paddingHorizontal: 24,
+    paddingHorizontal: smartScale(24),
   },
   categoriesContainer: {
     marginTop: smartScale(16),
@@ -99,7 +103,7 @@ const styles = StyleSheet.create({
   categoriesContentContainer: {
     gap: 16,
     paddingBottom: 30,
-    paddingHorizontal: 24,
+    paddingHorizontal: smartScale(24),
   },
 });
 

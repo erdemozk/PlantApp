@@ -1,5 +1,5 @@
 import AppSettings from '@appSettings';
-import { StyleSheet } from "react-native";
+import { Dimensions, StyleSheet } from "react-native";
 import { smartScale, verticalScale, scale } from '_utils';
 
 const styles = StyleSheet.create({
@@ -11,7 +11,8 @@ const styles = StyleSheet.create({
     height: '100%'
   },
   headerContainer: {
-    paddingHorizontal: smartScale(24)
+    paddingTop: 10,
+    paddingHorizontal: smartScale(24),
   },
   headerTitle: {
     lineHeight: 28,
@@ -34,9 +35,14 @@ const styles = StyleSheet.create({
     fontFamily: AppSettings.fonts["400"],
   },
   image: {
-    width: scale(375),
     height: scale(499),
     marginTop: verticalScale(24),
+    width: Dimensions.get('screen').width,
+  },
+  footerContainer: {
+    bottom: 30,
+    width: '100%',
+    position: 'absolute'
   },
   buttonContainer: {
     marginHorizontal: smartScale(24)

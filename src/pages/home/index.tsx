@@ -10,11 +10,24 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import styles from './style';
+import { ComponentProps } from 'react'
 import { Icon, GradientText } from 'elements';
 import { HomeContainer } from 'pageContainers';
 import { QuestionCard, CategoryCard } from 'components';
 
-const HomeScreen: React.FC = ({
+type HomeProps = {
+  loading: boolean
+  searchKey: string
+  handleQuestion: () => void
+  handleCategory: () => void
+  handlePromotion: () => void
+  handleChangeText: (text: string) => void
+  questions: ComponentProps<typeof QuestionCard>['item'][]
+  categories: ComponentProps<typeof CategoryCard>['item'][]
+};
+
+const HomeScreen: React.FC<HomeProps> = ({
+  loading,
   questions,
   searchKey,
   categories,
@@ -45,50 +58,64 @@ const HomeScreen: React.FC = ({
         />
       </View>
 
-      <TouchableOpacity style={styles.promotionContainer} onPress={handlePromotion}>
+      <TouchableOpacity
+        style={styles.promotionContainer}
+        onPress={handlePromotion}>
         <Image
           resizeMode="contain"
           style={styles.mailImage}
           source={require('src/assets/images/mail.png')}
         />
-        <View style={{ flex: 10 }}>
+        <View style={styles.promotionTextContainer}>
           <GradientText
-            colors={['#E5C990', '#E4B046']}
-            style={styles.promotionTitle}>
+            useAngle
+            angle={-84}
+            colors={['#E4B046', '#E5C990']}
+            textStyle={styles.promotionTitle}>
             FREE Premium Available
           </GradientText>
           <GradientText
-            colors={['#FFDE9C', '#F5C25B']}
-            style={styles.promotionSubTitle}
-            start={{ x: 0, y: 10 }}
-            end={{ x: 0, y: 0 }}
-          >
+            useAngle
+            angle={78}
+            colors={['#F5C25B', '#FFDE9C']}
+            textStyle={styles.promotionSubTitle}>
             Tap to upgrade your account!
           </GradientText>
         </View>
         <Icon name="arrow" size={24} color="#D0B070" />
       </TouchableOpacity>
 
-      <Text style={styles.getStartedTitle}>Get Started</Text>
-      <FlatList
-        horizontal
-        data={questions}
-        style={styles.questionContainer}
-        showsHorizontalScrollIndicator={false}
-        keyExtractor={item => item.id.toString()}
-        contentContainerStyle={styles.questionContentContainer}
-        renderItem={({ item }) => <QuestionCard item={item} onPress={handleQuestion} />}
-      />
-      <FlatList
-        numColumns={2}
-        data={categories}
-        scrollEnabled={false}
-        style={styles.categoriesContainer}
-        showsHorizontalScrollIndicator={false}
-        contentContainerStyle={styles.categoriesContentContainer}
-        keyExtractor={item => item.id.toString()}
-        renderItem={({ item, index }) => <CategoryCard item={item} index={index} onPress={handleCategory} />}
-      />
+      {!loading && (
+        <>
+          <Text style={styles.getStartedTitle}>Get Started</Text>
+          <FlatList
+            horizontal
+            data={questions}
+            style={styles.questionContainer}
+            showsHorizontalScrollIndicator={false}
+            keyExtractor={item => item.id.toString()}
+            contentContainerStyle={styles.questionContentContainer}
+            renderItem={({item}) => (
+              <QuestionCard item={item} onPress={handleQuestion} />
+            )}
+          />
+          <FlatList
+            numColumns={2}
+            data={categories}
+            scrollEnabled={false}
+            style={styles.categoriesContainer}
+            showsHorizontalScrollIndicator={false}
+            contentContainerStyle={styles.categoriesContentContainer}
+            keyExtractor={item => item.id.toString()}
+            renderItem={({item}) => (
+              <CategoryCard
+                item={item}
+                onPress={handleCategory}
+              />
+            )}
+          />
+        </>
+      )}
     </ScrollView>
   </SafeAreaView>
 );

@@ -9,8 +9,7 @@ import {
   ListRenderItemInfo,
 } from 'react-native';
 import styles from './style';
-import { Button } from 'elements';
-import { smartScale } from '_utils';
+import { Button, Icon } from 'elements';
 import PaywallContainer, {
   FeatureItem,
   OptionType,
@@ -42,12 +41,10 @@ const PaywallScreen: React.FC<Props> = ({
       source={require('src/assets/images/paywall.png')}
     />
     <View style={styles.scrollContainer}>
-      <TouchableOpacity onPress={async () => await handleClose()} style={styles.closeButton}>
-        <Image
-          source={require('src/assets/icons/close.png')}
-          width={smartScale(24)}
-          height={smartScale(24)}
-        />
+      <TouchableOpacity
+        style={styles.closeButton}
+        onPress={async () => await handleClose()}>
+        <Icon name="close" size={10} color="#FFFFFF" />
       </TouchableOpacity>
 
       <Text style={styles.title}>
@@ -59,11 +56,9 @@ const PaywallScreen: React.FC<Props> = ({
         data={featuresData}
         renderItem={({item}: ListRenderItemInfo<FeatureItem>) => (
           <View style={styles.featureCard}>
-            <Image
-              source={item.image}
-              style={styles.featureIconContainer}
-              resizeMode="contain"
-            />
+            <View style={styles.featureIconContainer}>
+              <Icon name={item.icon} size={18} />
+            </View>
             <Text style={styles.featureTitle}>{item.title}</Text>
             <Text style={styles.featureSubtitle}>{item.subtitle}</Text>
           </View>
@@ -139,8 +134,8 @@ const PaywallScreen: React.FC<Props> = ({
       </Text>
 
       <Text style={styles.footerLinks}>
-        <Text onPress={handleAgreements}>Terms</Text> •{' '}
-        <Text onPress={handleAgreements}>Privacy</Text> •{' '}
+        <Text onPress={handleAgreements}>Terms</Text>  •{'  '}
+        <Text onPress={handleAgreements}>Privacy</Text>  •{'  '}
         <Text onPress={handleRestore}>Restore</Text>
       </Text>
     </View>
