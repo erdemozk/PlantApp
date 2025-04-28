@@ -1,8 +1,8 @@
-# PlantAppCase - Case Study 🪴
+# PlantApp - Case Study 🪴
 
 ![React Native](https://img.shields.io/badge/React%20Native-0.79.1-blue?logo=react) ![TypeScript](https://img.shields.io/badge/TypeScript-5.0.4-blue?logo=typescript) ![Redux Toolkit](https://img.shields.io/badge/Redux%20Toolkit-2.7.0-764ABC?logo=redux) ![React Navigation](https://img.shields.io/badge/React%20Navigation-7.x-blue)
 
-This repository contains the source code for PlantAppCase, a React Native mobile application developed as a case study.
+This repository contains the source code for PlantApp, a React Native mobile application developed as a case study.
 
 ## ✨ Features
 
