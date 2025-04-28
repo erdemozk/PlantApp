@@ -2,7 +2,12 @@ import { ImageBackground, Text, TouchableOpacity } from 'react-native';
 import { QuestionItem } from 'src/store/slicers/questions';
 import styles from './style';
 
-const QuestionCard: React.FC<QuestionItem> = ({item, onPress}) => (
+type QuestionCardProps = {
+  item: QuestionItem
+  onPress: () => void
+}
+
+const QuestionCard: React.FC<QuestionCardProps> = ({ item, onPress }) => (
   <TouchableOpacity onPress={onPress}>
     <ImageBackground
       style={styles.imageBackground}

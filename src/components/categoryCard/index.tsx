@@ -2,7 +2,12 @@ import { ImageBackground, Text, TouchableOpacity } from 'react-native';
 import { CategoryItem } from 'src/store/slicers/categories';
 import styles from './style';
 
-const CategoryCard: React.FC<CategoryItem> = ({item, index, onPress}) => (
+type CategoryCardProps = {
+  item: CategoryItem,
+  onPress: () => void
+}
+
+const CategoryCard: React.FC<CategoryCardProps> = ({item, onPress}) => (
   <TouchableOpacity onPress={onPress}>
     <ImageBackground
       source={{uri: item.image.url}}

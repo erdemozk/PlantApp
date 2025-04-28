@@ -11,7 +11,7 @@ import defaultStyle from './defaultStyle';
 interface Props {
   title: string;
   disabled?: boolean
-  onPress: () => {};
+  onPress: () => void;
   textStyle?: StyleProp<TextStyle>;
   containerStyle?: StyleProp<ViewStyle>;
 };
