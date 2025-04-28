@@ -50,32 +50,33 @@ This repository contains the source code for PlantAppCase, a React Native mobile
 
 ## 📂 Project Structure
 
-The project follows a standard React Native structure with key directories organized under `src/`:
+The project is organized with a clear separation of concerns. Key directories and configuration files are listed below:
 
-PlantAppCase/
-├── src/
-│ ├── assets/ # Static assets (fonts, images, icons)
-│ ├── components/ # Reusable composite UI components (e.g., CategoryCard)
-│ ├── elements/ # Basic, reusable UI elements (e.g., Button, Icon)
-│ ├── navigation/ # Navigation setup (Stack, Tabs, Routers)
-│ ├── pageContainers/ # Logic containers for screens
-│ ├── pages/ # Application screens/views
-│ ├── store/ # Redux store, slices, and actions
-│ ├── utils/ # Utility functions (e.g., scaling)
-│ ├── appSettings.ts # Global application settings/constants
-│ └── request.ts # Axios instance configuration
-├── ios/ # iOS native project
-├── android/ # Android native project
-├── vendor/ # Bundler path for Gems
-├── App.tsx # Root application component
-├── index.js # App entry point
-├── package.json # Project dependencies and scripts
-├── tsconfig.json # TypeScript configuration
-├── babel.config.js # Babel configuration (with module-resolver aliases)
-├── Gemfile # Ruby gem dependencies (for Cocoapods)
-└── ... # Other configuration files (.eslintrc, .prettierrc, etc.)
+| Path / File                | Description                                                              |
+| :------------------------- | :----------------------------------------------------------------------- |
+| **Root Level**             |                                                                          |
+| `android/`                 | Native project files for the Android platform.                           |
+| `ios/`                     | Native project files for the iOS platform.                               |
+| `src/`                     | Contains the core application source code (see details below).           |
+| `App.tsx`                  | Root React component, sets up Redux, Navigation, and SafeArea providers. |
+| `index.js`                 | Native entry point registered with React Native.                         |
+| `package.json`             | Defines Node.js dependencies, scripts, and project metadata.             |
+| `babel.config.js`          | Babel compiler configuration, including path aliases (`module-resolver`).  |
+| `tsconfig.json`            | TypeScript compiler configuration, also defining path aliases.           |
+| `react-native.config.js`   | React Native specific configurations, like linking assets (fonts).         |
+| **`src/` Directory**       | **Core Application Code**                                                |
+| `assets/`                  | Static files: fonts, images, `icomoon.json` for icons.                   |
+| `components/`              | Reusable composite UI components (e.g., `CategoryCard`, `PaginationDots`). |
+| `elements/`                | Atomic, reusable UI building blocks (e.g., `Button`, `Icon`).            |
+| `navigation/`              | React Navigation setup (Stack Navigators, Bottom Tab Navigator).         |
+| `pageContainers/`          | Custom Hooks encapsulating screen logic and state management.            |
+| `pages/`                   | Components representing individual application screens/views.            |
+| `store/`                   | Redux Toolkit global state: store config, slices, async thunks.        |
+| `utils/`                   | Common utility functions (e.g., responsive scaling).                     |
+| `appSettings.ts`           | Centralized constants (AsyncStorage keys, font names, API info).         |
+| `request.ts`               | Configured Axios instance for making API calls.                          |
 
-Path aliases are configured in `babel.config.js` and `tsconfig.json` for cleaner imports (e.g., `src/`, `pages/`, `elements/`).
+**Note:** Path aliases are configured in `babel.config.js` and `tsconfig.json` for cleaner import statements (e.g., `import { Button } from 'elements';`).
 
 ## 🚀 Getting Started
 
